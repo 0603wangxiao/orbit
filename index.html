@@ -32782,5 +32782,19 @@ function saveHist() { try { localStorage.setItem(HIST_KEY, JSON.stringify(hist.s
   setInterval(lock, 400); lock();
 })();
 </script>
+<style>
+/* 手机端提示：这个站是桌面端设计，窄屏只提示、不做适配（2026-11-06） */
+#mNotice{display:none}
+@media (max-width:820px){
+  #mNotice{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:99999;
+    padding:14px 18px calc(14px + env(safe-area-inset-bottom));
+    background:rgba(16,16,18,.96);border-top:1px solid rgba(255,86,16,.45);
+    color:#f2f2f4;font-size:13px;line-height:1.7;align-items:center;gap:10px}
+  #mNotice b{color:#ff8a4d}
+}
+</style>
+<div id="mNotice">
+  <span><b>桌面端设计</b> · 建议用电脑打开，手机上排版会错乱</span>
+</div>
 </body>
 </html>
